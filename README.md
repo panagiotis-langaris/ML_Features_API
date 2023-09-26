@@ -9,7 +9,7 @@ A FastAPI application that can be used to extract features from a given data set
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
-- [Helpful Screenshots](#screenshots)
+- [Helpful Screenshots](#helpful-screenshots)
 
 ## About
 
