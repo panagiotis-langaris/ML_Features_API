@@ -32,12 +32,14 @@ The required packages are listed inside the requirements.txt file.
    ```bash
    git clone https://github.com/yourusername/optasia-fastapi.git
    cd optasia-fastapi
-
+   
 In Visual Studio Code terminal, run the below:
 
 ### 1. Create a virtual environment and activate it:
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+   
+   ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 ### 2. Install the dependencies:
 pip install -r requirements.txt
