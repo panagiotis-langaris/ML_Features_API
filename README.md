@@ -22,28 +22,22 @@ The API comes with unit testing to ensure the API is operating promptly and log 
 The required packages are listed inside the requirements.txt file.
 
 ### Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/yourusername/optasia-fastapi.git
-   cd optasia-fastapi
-   
+  
 In Visual Studio Code terminal, run the below:
 
-### 1. Create a virtual environment and activate it:
+#### 1. Create a virtual environment and activate it:
 
   ```bash
-  python -m venv venv
-  source venv/bin/activate  # On Windows: venv\Scripts\activate
+  python -m venv getfeatures
+  .\getfeatures\Scripts/activate  # (On Windows)
   ```
 
-### 2. Install the dependencies:
+#### 2. Install the dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Build Docker image and run the container
+#### 3. Build Docker image and run the container
 
 ```bash
 docker build -t get_features_app .
