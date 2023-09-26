@@ -1,7 +1,4 @@
 # Get_Features FastAPI Application
-
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-
 A FastAPI application that can be used to extract features from a given data set using the Featuretools framework.
 
 ## Table of Contents
