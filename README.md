@@ -22,7 +22,8 @@ The API comes with unit testing to ensure the API is operating promptly and log 
 The required packages are listed inside the requirements.txt file.
 
 ### Installation
-  
+
+After downloading or cloning all the files, launch Visual Studio Code and change directory (cd) to the downloaded folder.
 In Visual Studio Code terminal, run the below:
 
 #### 1. Create a virtual environment and activate it:
@@ -31,13 +32,7 @@ In Visual Studio Code terminal, run the below:
   python -m venv getfeatures
   .\getfeatures\Scripts/activate  # (On Windows)
   ```
-
-#### 2. Install the dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-#### 3. Build Docker image and run the container
+#### 2. Build Docker image and run the container
 
 ```bash
 docker build -t get_features_app .
