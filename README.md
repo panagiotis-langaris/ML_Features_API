@@ -4,7 +4,6 @@ A FastAPI application that can be used to extract features from a given data set
 ## Table of Contents
 
 - [About](#about)
-- [Features](#features)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -13,11 +12,8 @@ A FastAPI application that can be used to extract features from a given data set
 
 ## About
 
-[Provide a brief description of your application. Explain its purpose and any unique features.]
-
-## Features
-
-- [List some key features of your application.]
+This repository contains the Get_Features FastAPI application, which is designed to extract features from a provided dataset using the Featuretools framework. The application offers a set of API endpoints that allow users to perform feature extraction and retrieve the resulting features in a structured format.
+The API comes with unit testing to ensure the API is operating promptly and log configuration to monitor the API.
 
 ## Getting Started
 
@@ -36,18 +32,23 @@ The required packages are listed inside the requirements.txt file.
 In Visual Studio Code terminal, run the below:
 
 ### 1. Create a virtual environment and activate it:
-   
-   ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+  ```bash
+  python -m venv venv
+  source venv/bin/activate  # On Windows: venv\Scripts\activate
+  ```
 
 ### 2. Install the dependencies:
+```bash
 pip install -r requirements.txt
+```
 
 ### 3. Build Docker image and run the container
 
+```bash
 docker build -t get_features_app .
 docker run -p 80:80 get_features_app
+```
 
 ## Usage
 
