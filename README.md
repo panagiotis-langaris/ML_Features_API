@@ -47,6 +47,7 @@ After starting the container, you can start consuming the API:
 - Check the API Documentation by browsing to at http://localhost/docs
   Here you can also consume the API endpoints, or you can use Postman client instead.
 - In Docker Terminal, run the following command to run the unit tests. It should return 2 passed tests.
+  ```bash
   pytest test_main.py
 - In Docker Files, you can see the log file inside the ''app'' folder (/app/app.log). The requests that the API received are kept here.
 
