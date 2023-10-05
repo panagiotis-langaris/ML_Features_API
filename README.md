@@ -30,7 +30,7 @@ In Visual Studio Code terminal, run the below:
 
   ```bash
   python -m venv getfeatures
-  .\getfeatures\Scripts/activate  # (On Windows)
+  .\getfeatures\Scripts\activate  # (On Windows)
   ```
 #### 2. Build Docker image and run the container
 
