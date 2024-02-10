@@ -3,6 +3,12 @@ pipeline {
     options {
         skipDefaultCheckout(true)
     }
+    tools {
+        // Specify the name of the Python installation configured in Global Tool Configuration
+        node('master') {
+            tool 'AnacondaPython'
+        }
+    }
     stages {
         stage('Checkout') {
             steps {
