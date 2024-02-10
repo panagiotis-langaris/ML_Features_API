@@ -13,20 +13,30 @@ pipeline {
                 }
             }
         }
-
-        stage('Build and Test') {
+        stage('Build environment') {
             steps {
                 script {
+                    echo 'Stage 2: Build & activate virtual environment, and install dependencies'
                     // Specify the path to Python executable
                     def pythonExecutable = "C:\\Users\\plang\\anaconda3\\python.exe"
-                    
-                    // Install dependencies
-                    echo 'Stage 2a: Install package dependencies'
-                    //bat 'pip install -r requirements.txt'
-                    bat "${pythonExecutable} -m pip --version"
+					
+                    // Specify the path for the virtual environment
+                    def venvPath = "venv"
 
+                    // Create and activate virtual environment
+                    bat "${pythonExecutable} -m venv ${venvPath}"
+                    bat "${venvPath}\\Scripts\\activate"
+
+                    // Install dependencies
+                    bat "${venvPath}\\Scripts\\pip install -r requirements.txt"
+                }
+            }
+        }
+        stage('Unit tests') {
+            steps {
+                script {
                     // Run unit tests using pytest
-                    echo 'Stage 2b: Run unit tests'
+                    echo 'Stage 3: Run unit tests'
                     //sh 'pytest'
                     //sh 'python -m unittest discover -s tests'    
                 }
