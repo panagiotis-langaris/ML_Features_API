@@ -5,10 +5,9 @@ pipeline {
     }
     tools {
         // Specify the name of the Python installation configured in Global Tool Configuration
-        node('master') {
-            tool 'AnacondaPython'
-        }
+        tool 'AnacondaPython'
     }
+	
     stages {
         stage('Checkout') {
             steps {
