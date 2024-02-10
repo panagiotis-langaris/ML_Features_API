@@ -17,6 +17,9 @@ pipeline {
         stage('Build and Test') {
             steps {
                 script {
+                    // Specify the path to Python executable
+                    def pythonExecutable = "C:\\Users\\plang\\anaconda3\\python.exe"
+                    
                     // Install dependencies
                     echo 'Stage 2a: Install package dependencies'
                     //bat 'pip install -r requirements.txt'
