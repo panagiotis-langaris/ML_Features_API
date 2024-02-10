@@ -5,7 +5,7 @@ pipeline {
     }
 
     tools {
-        tool 'JenkinsPython'
+        jdk 'JenkinsPython'
     }
     stages {
         stage('Checkout') {
