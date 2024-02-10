@@ -29,7 +29,7 @@ pipeline {
 
                     // Install dependencies
                     bat "${pythonExecutable} --version"
-                    bat "conda list"
+                    bat "python --version"
                     //bat "${venvPath}\\Scripts\\pip install -r requirements.txt"
                 }
             }
