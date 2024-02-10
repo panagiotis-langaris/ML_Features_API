@@ -28,7 +28,8 @@ pipeline {
                     bat "${venvPath}\\Scripts\\activate"
 
                     // Install dependencies
-                    bat "${venvPath}\\Scripts\\pip install -r requirements.txt"
+                    bat "${pythonExecutable} --version"
+                    //bat "${venvPath}\\Scripts\\pip install -r requirements.txt"
                 }
             }
         }
