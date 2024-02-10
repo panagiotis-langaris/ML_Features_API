@@ -3,12 +3,7 @@ pipeline {
     options {
         skipDefaultCheckout(true)
     }
-    tools {
-        // Specify the name of the Python installation configured in Global Tool Configuration
-        //tool 'AnacondaPython'
-        jdk 'AnacondaPython'
-    }
-	
+
     stages {
         stage('Checkout') {
             steps {
