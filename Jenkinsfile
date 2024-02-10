@@ -4,6 +4,9 @@ pipeline {
         skipDefaultCheckout(true)
     }
 
+    tools {
+        tool 'JenkinsPython'
+    }
     stages {
         stage('Checkout') {
             steps {
