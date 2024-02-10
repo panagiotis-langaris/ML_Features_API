@@ -17,7 +17,9 @@ pipeline {
                 script {
                     // Install dependencies
                     echo 'Stage 2a: Install package dependencies'
-                    bat 'pip install -r requirements.txt'
+                    //bat 'pip install -r requirements.txt'
+                    bat 'python --version'
+                    bat 'pip --version'
 
                     // Run unit tests using pytest
                     echo 'Stage 2b: Run unit tests'
