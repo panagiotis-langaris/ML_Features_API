@@ -5,7 +5,8 @@ pipeline {
     }
     tools {
         // Specify the name of the Python installation configured in Global Tool Configuration
-        tool 'AnacondaPython'
+        //tool 'AnacondaPython'
+        jenkins.plugins.shiningpanda.tools.PythonInstallation 'AnacondaPython'
     }
 	
     stages {
