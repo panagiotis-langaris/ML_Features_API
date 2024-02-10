@@ -4,10 +4,10 @@ pipeline {
         skipDefaultCheckout(true)
     }
 
-    tools {
+    //tools {
         //jenkins.plugins.shiningpanda.tools.PythonInstallation tool: 'JenkinsPython'
-        python {name 'JenkinsPython'}
-    }
+        //python {name 'JenkinsPython'}
+    //}
     stages {
         stage('Checkout') {
             steps {
@@ -34,7 +34,7 @@ pipeline {
 
                     // Install dependencies
                     bat "${pythonExecutable} --version"
-                    bat "python --version"
+                    //bat "python --version"
                     //bat "${venvPath}\\Scripts\\pip install -r requirements.txt"
                 }
             }
