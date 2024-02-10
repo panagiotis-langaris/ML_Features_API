@@ -6,7 +6,7 @@ pipeline {
 
     tools {
         //jenkins.plugins.shiningpanda.tools.PythonInstallation tool: 'JenkinsPython'
-        python {name 'JenkinsPython}
+        python {name 'JenkinsPython'}
     }
     stages {
         stage('Checkout') {
