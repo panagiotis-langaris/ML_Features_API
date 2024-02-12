@@ -14,7 +14,9 @@ pipeline {
                 script {
                     // Checkout your code from version control
                     echo 'Stage 1: Checkout code in GitHub (scm)'
-                    checkout scm
+                    //checkout scm
+                    // Checkout the code from GitHub using the Pipeline-Syntax- generated code snippet
+                    checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/panagiotis-langaris/ML_Features_API.git']])
                 }
             }
         }
