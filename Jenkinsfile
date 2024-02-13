@@ -46,8 +46,11 @@ pipeline {
                 script {
                     // Run unit tests using pytest
                     echo 'Stage 3: Run unit tests'
+                    // Specify the path to Shell executable
+                    def shellExecutable = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
                     //sh 'python main.py'
-                    sh 'docker ps'
+                    bat "${shellExecutable} 'docker ps'"
+                    //sh 'docker ps'
                     //sh 'pytest'
                     //sh 'python -m unittest discover -s tests'    
                 }
