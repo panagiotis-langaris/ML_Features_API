@@ -50,6 +50,7 @@ pipeline {
                     def shellExecutable = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
                     //sh 'python main.py'
                     bat "${shellExecutable} docker ps"
+                    bat "${shellExecutable} python main.py"
                     //sh 'docker ps'
                     //sh 'pytest'
                     //sh 'python -m unittest discover -s tests'    
