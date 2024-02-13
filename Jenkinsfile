@@ -26,7 +26,7 @@ pipeline {
 		//bat "python --version"
 		//bat "${venvPath}\\Scripts\\pip install -r requirements.txt"
 		// Run Python file
-		sh 'python3 main.py'
+		sh 'pytest'
             }
         }
         stage('Unit tests') {
