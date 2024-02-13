@@ -11,50 +11,44 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                script {
-                    // Checkout your code from version control
-                    echo 'Stage 1: Checkout code in GitHub (scm)'
-                    //checkout scm
-                    // Checkout the code from GitHub using the Pipeline-Syntax- generated code snippet
-                    checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/panagiotis-langaris/ML_Features_API.git']])
-                }
+		// Checkout your code from version control
+		echo 'Stage 1: Checkout code in GitHub (scm)'
+		//checkout scm
+		// Checkout the code from GitHub using the Pipeline-Syntax- generated code snippet
+		checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/panagiotis-langaris/ML_Features_API.git']])
             }
         }
         stage('Build environment') {
             steps {
-                script {
-                    echo 'Stage 2: Build & activate virtual environment, and install dependencies'
-                    // Specify the path to Python executable
-                    def pythonExecutable = "C:\\Users\\plang\\anaconda3\\python.exe"
-					
-                    // Specify the path for the virtual environment
-                    def venvPath = "venv"
-
-                    // Create and activate virtual environment
-                    bat "${pythonExecutable} -m venv ${venvPath}"
-                    bat "${venvPath}\\Scripts\\activate"
-
-                    // Install dependencies
-                    bat "${pythonExecutable} --version"
-                    //bat "python --version"
-                    //bat "${venvPath}\\Scripts\\pip install -r requirements.txt"
-                }
+		echo 'Stage 2: Build & activate virtual environment, and install dependencies'
+		// Specify the path to Python executable
+		//def pythonExecutable = "C:\\Users\\plang\\anaconda3\\python.exe"
+		sh 'docker ps'
+		// Specify the path for the virtual environment
+		//def venvPath = "venv"
+		
+		// Create and activate virtual environment
+		//bat "${pythonExecutable} -m venv ${venvPath}"
+		//bat "${venvPath}\\Scripts\\activate"
+		
+		// Install dependencies
+		//bat "${pythonExecutable} --version"
+		//bat "python --version"
+		//bat "${venvPath}\\Scripts\\pip install -r requirements.txt"
             }
         }
         stage('Unit tests') {
             steps {
-                script {
-                    // Run unit tests using pytest
-                    echo 'Stage 3: Run unit tests'
-                    // Specify the path to Shell executable
-                    def shellExecutable = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
-                    //sh 'python main.py'
-                    bat "${shellExecutable} docker ps"
-                    bat "${shellExecutable} python main.py"
-                    //sh 'docker ps'
-                    //sh 'pytest'
-                    //sh 'python -m unittest discover -s tests'    
-                }
+		// Run unit tests using pytest
+		echo 'Stage 3: Run unit tests'
+		// Specify the path to Shell executable
+		//def shellExecutable = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+		sh 'python main.py'
+		//bat "${shellExecutable} docker ps"
+		//bat "${shellExecutable} python main.py"
+		//sh 'docker ps'
+		//sh 'pytest'
+		//sh 'python -m unittest discover -s tests'
             }
         }
 
@@ -71,11 +65,9 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                script {
-                    // Deploy your application (e.g., start Docker container)
-                    //sh 'docker run -d -p 8080:8080 your-image-name'
-                    echo 'Deploy'
-                }
+		// Deploy your application (e.g., start Docker container)
+		//sh 'docker run -d -p 8080:8080 your-image-name'
+		echo 'Deploy'
             }
         }
     }
